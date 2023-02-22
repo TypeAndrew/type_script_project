@@ -8,12 +8,22 @@ class Parser {
 }
 class Downloader {
     htmlParse() {
-        console.log('html');
-    }
-    jsonParse() {
-        console.log('json');
+        console.log('xml');
+        return 'xml';
     }
 }
-const Dn = new Downloader(), string;
-Dn.htmlParse();
-Dn.jsonParse();
+const Dn = new Downloader();
+class Sonar {
+    ping() {
+        console.log("ping!");
+    }
+}
+class Ball {
+    ping() {
+        console.log("ping!");
+    }
+    pong() {
+        console.log("pong!");
+    }
+}
+const ball = new Ball();

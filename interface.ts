@@ -18,19 +18,37 @@ interface JsonInterface {
 
  class Downloader implements HtmlInterface {
     public htmlParse(): string {
-        console.log('html');
+        console.log('xml');
+        return 'xml'
+
     }
 
-    public jsonParse(): string {
-        console.log('json')
-    }
+     
 
  }
 
- const Dn = new Downloader(): string;
- Dn.htmlParse();
- Dn.jsonParse();
+ const Dn = new Downloader();
+ //Dn.htmlParse();
 
 
+ interface Pingable {
+    ping(): void;
+  }
+   
+  class Sonar implements Pingable {
+    ping() {
+      console.log("ping!");
+    }
+  }
+   
+  class Ball implements Pingable {
+ 
+    ping() {
+      console.log("ping!");
+    }
+    pong() {
+        console.log("pong!");  
+    }
+  }
 
-  
+  const ball = new Ball();
